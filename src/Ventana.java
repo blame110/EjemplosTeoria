@@ -12,7 +12,7 @@ public class Ventana {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JPasswordField passwordField;
+	private JPasswordField  passwordField;
 
 	/**
 	 * Launch the application.
@@ -23,8 +23,8 @@ public class Ventana {
 				try {
 					Ventana window = new Ventana();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+				} catch (Exception ex) {
+					ex.printStackTrace();
 				}
 			}
 		});
