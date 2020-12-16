@@ -16,6 +16,9 @@ package Tema3;
  * 
  * 
  * @author pablo
+ * 
+ *         ¿Como serian las clases enemigo y jugador?
+ *         Intentar crear las clases
  *
  */
 public class Esfera {
