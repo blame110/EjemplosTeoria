@@ -17,7 +17,8 @@ public class EjemploPrimo {
 		System.out.print("Escribe un numero: ");
 		num = teclado.nextInt();
 
-		for (int i = 2; i < num; i++) {
+		int i = 2;
+		for (i = 2; i < num; i++) {
 
 			if (num % i == 0) {
 				esPrimo = false;

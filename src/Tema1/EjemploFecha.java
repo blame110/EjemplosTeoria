@@ -1,4 +1,5 @@
 package Tema1;
+
 import java.util.Date;
 
 public class EjemploFecha {
@@ -24,6 +25,7 @@ public class EjemploFecha {
 
 		Date d3 = new Date("April 3 1993 3:24 PM");
 		System.out.println("Fecha tercera: " + d3);
+		Debug.log("hola")
 
 	}
 

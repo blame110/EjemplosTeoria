@@ -6,13 +6,17 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.awt.event.ActionEvent;
 
 public class Ventana {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JPasswordField  passwordField;
+	private JPasswordField passwordField;
+	int cantidad;
+	double tamanox;
+	double tamanoy;
 
 	/**
 	 * Launch the application.
@@ -20,11 +24,15 @@ public class Ventana {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				
+				FileReader fichero = new FileReader();
+				
+				
 				try {
-					Ventana window = new Ventana();
+					Ventana window = new Ventanas();
 					window.frame.setVisible(true);
 				} catch (Exception ex) {
-					ex.printStackTrace();
+					ex.printStackTrace()
 				}
 			}
 		});
@@ -52,22 +60,22 @@ public class Ventana {
 		JButton btnBoton = new JButton("Boton");
 		btnBoton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				textField.setText("Has pulsado el boton");
-				
+
 			}
 		});
 		btnBoton.setBounds(299, 70, 117, 25);
 		frame.getContentPane().add(btnBoton);
-		
-		
-		
+
 		passwordField = new JPasswordField();
 		passwordField.setBounds(106, 118, 4, 19);
 		frame.getContentPane().add(passwordField);
-		
-		JRadioButton radioButton = new JRadioButton("18-25");
-		radioButton.setBounds(29, 170, 149, 23);
-		frame.getContentPane().add(radioButton);
+
+		for (int i; i >= 5; i++) {
+			JRadioButton radioButton = new JRadioButton("18-25");
+			radioButton.setBounds(29, 170, 149, 23);
+			frame.getContentPane().add(radioButton);
+		}
 	}
 }
