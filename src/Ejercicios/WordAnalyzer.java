@@ -3,13 +3,20 @@ package Ejercicios;
 /**
  * A class that analyzes words.
  */
+
 public class WordAnalyzer {
+
+	//Cadena de caracteres que se va a tratar.
+	private String word;
+
 	/**
-	 * Constructs an analyzer for a given word.
+	 * Constructor, crea un objeto WordAnalyzer a partir de un String
 	 * 
 	 * @param aWord the word to be analyzed
 	 */
+	@SuppressWarnings("deprecation")
 	public WordAnalyzer(String aWord) {
+
 		word = aWord;
 	}
 
@@ -45,6 +52,13 @@ public class WordAnalyzer {
 		return 0;
 	}
 
+	/**
+	 * Busca el caracter c en la palabra a partir de la posicion pos
+	 * 
+	 * @param c   caracter a buscar
+	 * @param pos posición a partir de la cual se busca
+	 * @return posicion en la que se ha encontrado
+	 */
 	private int find(char c, int pos) {
 		for (int i = pos; i < word.length(); i++) {
 			if (word.charAt(i) == c) {
@@ -72,5 +86,4 @@ public class WordAnalyzer {
 		return c;
 	}
 
-	private String word;
 }

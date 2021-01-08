@@ -2,6 +2,7 @@ package Ejercicios;
 
 public class WordAnalyzerTester {
 	public static void main(String[] args) {
+
 		test("aardvark"); // expect: a
 		test("roommate"); // expect: o (not m)
 		test("mate"); // expect: 0 (no duplicate letters)
