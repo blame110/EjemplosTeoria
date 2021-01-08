@@ -42,7 +42,7 @@ public class EjemploEstadisticas {
 			if (edad >= 18)
 				mayoresEdad++;
 
-			if (notaMedia < 5)
+			if (notaMedia <= 6)
 				suspensos++;
 
 			// Incrementamos sumaEdad con la edad
