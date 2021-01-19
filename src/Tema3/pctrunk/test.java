@@ -10,14 +10,6 @@ public class test {
 		Categoria software = new Categoria(3, "Software", "Todo tipo de programas oficales");
 		Almacen sevilla = new Almacen();
 
-		System.out.println(hardware);
-
-		System.out.println(software);
-
-		System.out.println(tecladoMars);
-
-		System.out.println(tecladoMars.generarNombre());
-
 		System.out.println(sevilla);
 
 	}

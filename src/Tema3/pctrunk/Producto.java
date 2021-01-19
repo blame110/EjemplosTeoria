@@ -35,11 +35,7 @@ public class Producto {
 	 */
 	public String generarNombre() {
 		//Generamos un número aleatorio menor de 91
-		int aleatorio = (int) (Math.random() * 91);
-
-		//Forzamos a que sea mayor de 65
-		while (aleatorio < 65)
-			aleatorio = (int) (Math.random() * 91);
+		int aleatorio = (int) (Math.random() * (24)) + 65;
 
 		//Convertimos el número ascii en caracter
 		char car = (char) aleatorio;

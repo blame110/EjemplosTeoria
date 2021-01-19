@@ -8,7 +8,7 @@ public class Almacen {
 	String Localidad;
 	int codPostal;
 
-	public final static int NUM_PRODUCTOS = 10;
+	public static int NUM_PRODUCTOS = 10;
 
 	public Almacen() {
 		this.Localidad = "Generica";
