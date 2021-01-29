@@ -1,6 +1,6 @@
 package Tema3.pctrunk;
 
-public class test {
+public class prueba {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

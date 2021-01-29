@@ -20,4 +20,14 @@ package Tema3.spaceX;
  */
 public class Motor {
 
+	private int consumoEnergia;
+
+	public int getConsumoEnergia() {
+		return consumoEnergia;
+	}
+
+	public void setConsumoEnergia(int consumoEnergia) {
+		this.consumoEnergia = consumoEnergia;
+	}
+
 }

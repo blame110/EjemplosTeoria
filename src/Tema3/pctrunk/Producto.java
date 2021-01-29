@@ -34,13 +34,70 @@ public class Producto {
 	 * a las letras en el codigo ascii
 	 */
 	public String generarNombre() {
-		//Generamos un número aleatorio menor de 91
-		int aleatorio = (int) (Math.random() * (24)) + 65;
 
-		//Convertimos el número ascii en caracter
-		char car = (char) aleatorio;
+		String nombre = "";
 
-		return String.valueOf(car);
+		//Generamos la longitud del nombre de forma aleatoria
+		int longitud = (int) (Math.random() * 6 + 3);
+
+		//Generamos longitud caracteres y los vamos añadiendo a la cadena
+		for (int i = 0; i < longitud; i++) {
+
+			//Generamos un número aleatorio menor de 91
+			int aleatorio = (int) (Math.random() * (24)) + 65;
+
+			//Convertimos el número ascii en caracter
+			char car = (char) aleatorio;
+
+			//Convertimos el caracter generado a String
+			//y lo añadimos al final del nombre
+			nombre = nombre.concat(String.valueOf(car));
+
+		}
+
+		//Devolvemos el nombre completo
+		return nombre;
+
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	@Override

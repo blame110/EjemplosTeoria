@@ -20,4 +20,8 @@ package Tema3.spaceX;
  */
 public class Arma {
 
+	public int tipoNave;
+	public int peso;
+	public int potenciaDisparo;
+
 }

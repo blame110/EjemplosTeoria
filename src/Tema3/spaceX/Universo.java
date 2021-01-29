@@ -22,4 +22,5 @@ package Tema3.spaceX;
  */
 public class Universo {
 
+	public static final int NAVE_FEDERACION = 1;
 }

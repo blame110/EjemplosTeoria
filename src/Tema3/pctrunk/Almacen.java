@@ -52,4 +52,28 @@ public class Almacen {
 				+ codPostal + "]";
 	}
 
+	/**
+	 * Funcion que devuelve la suma de los precios de todos los ç
+	 * productos que se les pasen
+	 */
+	public double calcularPrecios(Producto prod[]) {
+
+		double precioTotal = 0.0;
+
+		//Si el array esta vacio usamos el array de productos del almacen
+		if (prod.length == 0) {
+			prod = this.productos;
+		}
+
+		//Recorremos todos los productos del array y sumamos
+		//al precio total su precio por la cantidad de productos
+		for (int i = 0; i < prod.length; i++) {
+			precioTotal += prod[i].getPrecio() * prod[i].getCantidad();
+		}
+
+		//Devolvemos la suma total de precios
+		return precioTotal;
+
+	}
+
 }
