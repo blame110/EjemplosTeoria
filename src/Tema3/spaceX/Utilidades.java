@@ -28,10 +28,6 @@ public class Utilidades {
 	public static final int TIPO_PERSONA = 2;
 	public static final int TIPO_ALA = 3;
 
-	public static String generarNombre(int tipo) {
-		return "";
-	}
-
 	/**
 	 * Genera un nombre aleatorio
 	 * 

@@ -43,8 +43,9 @@ public class Escuadron {
 
 		this.nombre = Utilidades.generarNombre(Utilidades.TIPO_ALA);
 
-		for (int i = 0; i < 10; i++) {
-			NaveEspacial nueva = new NaveEspacial();
-		}
+	}
+
+	public Escuadron(String nombreRecibido) {
+		this.nombre = nombreRecibido;
 	}
 }

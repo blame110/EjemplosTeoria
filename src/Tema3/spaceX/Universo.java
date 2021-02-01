@@ -23,4 +23,6 @@ package Tema3.spaceX;
 public class Universo {
 
 	public static final int NAVE_FEDERACION = 1;
+
+	public static final int ARMA_LASER = 1;
 }

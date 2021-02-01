@@ -21,6 +21,10 @@ package Tema3.spaceX;
  *          Municion int[] tendra tres tipos de munición, dependiendo de si es laser, plasma o cañon
  *          Integridad int
  *          nombreAla String
+ *          public int numMaxMotores;
+ *          public int numMaxArmas;
+ *          public int motoresInstalados;
+ *          public int armasInstaladas;
  * 
  *          tipoNave int //de los valores de universo
  * 
@@ -28,12 +32,7 @@ package Tema3.spaceX;
  *          ClaseNave EXPLORACION, GUERRA, COMERCIAL, PASAJEROS
  *          Motor motores[]
  *          Arma armas[]
- *          public int numMaxMotores;
- *          public int numMaxArmas;
- *          public int motoresInstalados;
- *          public int armasInstaladas;
  * 
- *          4 armas
  * 
  * 
  *          METODOS
@@ -43,7 +42,9 @@ package Tema3.spaceX;
  * 
  *          Crear 3 Constructores
  *          El primero vacio, generará los valores, incluido el nombre, aleatoriamente
+ * 
  *          El segundo recibirá sólo el nombre, el resto aleatorio
+ * 
  *          La última recibirá todas las variables de tipo básico
  * 
  *          int montarArma(arma arma1)
@@ -147,8 +148,8 @@ public class NaveEspacial {
 				energiaTotal = energiaTotal + motores[i].getConsumoEnergia();
 			}
 
-			for (int i = 0; i < this.armasInstaladas; i++) {
-				energiaTotal = energiaTotal + armas[i].potenciaDisparo;
+			for (Arma armatmp : armas) {
+				energiaTotal = energiaTotal + armatmp.potenciaDisparo;
 			}
 
 			//Energia total con el arma
