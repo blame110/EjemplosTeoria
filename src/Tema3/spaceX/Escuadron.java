@@ -25,7 +25,7 @@ package Tema3.spaceX;
  *          Añadirá la nave al array de naves espaciales y incrementara
  *          el número de naves.
  *          Comprobará que hay espacio en el ala y que no esta llena, devuelve 0 si todo va bien y -1 si hay fallo
- *          Le pondrá a la nave el nombre del ala
+ *          Le pondrá a la nave el nombre del escuadron en su variable nombreEscuadron
  * 
  *          naveEspacial masPoderosa()
  *          Devolverá la nave más poderosa del ala

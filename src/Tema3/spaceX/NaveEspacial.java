@@ -19,7 +19,7 @@ package Tema3.spaceX;
  *          Escudo int publico
  *          Municion int[] tendra tres tipos de munición, dependiendo de si es laser, plasma o cañon
  *          Integridad int
- *          nombreAla String
+ *          nombreEscuadron String
  *          public int numMaxMotores;
  *          public int numMaxArmas;
  *          public int motoresInstalados;
