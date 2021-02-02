@@ -39,9 +39,11 @@ public class Escuadron {
 	public int posicion[];
 	public NaveEspacial naves[];
 
+	public int numNaves;
+
 	public Escuadron() {
 
-		this.nombre = Utilidades.generarNombre(Utilidades.TIPO_ALA);
+		this.nombre = Utilidades.nombreAleatorio(Utilidades.TIPO_ALA);
 
 	}
 

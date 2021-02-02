@@ -15,7 +15,6 @@ package Tema3.spaceX;
  *          CargaMáxima int publico
  *          CargaLibre int publico
  *          MaxTripulantes int publico
- *          PotenciaAtaque int privado
  *          posicion int[] publico //Array de enteros de dos cordenadas, posicion[0] seria x y posicion[1] seria y
  *          Escudo int publico
  *          Municion int[] tendra tres tipos de munición, dependiendo de si es laser, plasma o cañon
@@ -77,8 +76,6 @@ package Tema3.spaceX;
  * 
  * 
  * 
- * 
- * 
  *
  */
 public class NaveEspacial {
@@ -98,7 +95,10 @@ public class NaveEspacial {
 	public int motoresInstalados;
 	public int armasInstaladas;
 
-	public NaveEspacial() {
+	public NaveEspacial(int numMaxArmasNuevo) {
+
+		this.numMaxArmas = numMaxArmasNuevo;
+		this.armas = new Arma[numMaxArmas];
 
 	}
 

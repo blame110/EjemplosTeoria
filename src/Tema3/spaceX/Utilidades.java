@@ -34,7 +34,7 @@ public class Utilidades {
 	 * @param tipo tipo de nombre a generar puede ser PERSONA, NAVE, ALA O ARMA
 	 * @return
 	 */
-	public String nombreAleatorio(int tipo) {
+	public static String nombreAleatorio(int tipo) {
 
 		String nombre = "";
 
