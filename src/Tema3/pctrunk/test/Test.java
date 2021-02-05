@@ -49,6 +49,7 @@ public class Test {
 
 	@org.junit.Test
 	public void test() {
+
 		Almacen almacen = new Almacen();
 		Producto tecladoMars = new Producto();
 		Producto ratonMars = new Producto();
