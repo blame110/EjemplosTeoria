@@ -1,9 +1,13 @@
 package Tema3.pctrunk;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Almacen {
 
@@ -65,6 +69,63 @@ public class Almacen {
 			//Cerramos el flujo de datos
 			fw.close();
 			return 0;
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			return -1;
+		}
+
+	}
+
+	public int cargarProductos() {
+
+		try {
+
+			//Abrimos el fichero con file
+			File arch = new File(this.RUTA_FICHERO);
+			//Utilizamos FileReader y BufferedReader para poder leer linea a linea en modo texto
+			FileReader fr = new FileReader(arch);
+			BufferedReader br = new BufferedReader(fr);
+
+			for (int i = 0; i < this.NUM_PRODUCTOS; i++) {
+
+				//leemos una linea del fichero
+				String linea = br.readLine();
+
+				//Para cada linea tenemos que extraer todos los campos del producto
+				//Utilizamos un StringTokenizer para separarlos
+				StringTokenizer tokens = new StringTokenizer(linea);
+
+				//Creamos un producto para cargar los datos de la linea del fichero
+				Producto prod = new Producto();
+
+				//El primero es el nombre
+				prod.setNombre(tokens.nextToken());
+
+				//El segundo token es la descripcion
+				prod.setDescripcion(tokens.nextToken());
+
+				//El Tercer token es la cantidad
+				prod.setCantidad(Integer.valueOf(tokens.nextToken()));
+
+				//El Tercer token es el precio
+				prod.setPrecio(Double.valueOf(tokens.nextToken()));
+
+				//Para la categoria creamos un objeto de tipo categoria y le asignamos el id leyendolo del fichero
+				Categoria cat = new Categoria();
+				cat.id = Integer.valueOf(tokens.nextToken());
+				prod.setCategoria(cat);
+
+				//Guardamos el producto en el array de productos del almacen
+				this.productos[i] = prod;
+
+			}
+
+			//for (int i = 0; i < 10; i++)
+			//	System.out.println(this.productos[i].toString());
+
+			br.close();
+			return 0;
+
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			return -1;

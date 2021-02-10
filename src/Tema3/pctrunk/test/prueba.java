@@ -32,7 +32,8 @@ public class prueba {
 
 		}
 
-		almacen.salvarProductos();
+		//almacen.salvarProductos();
+		almacen.cargarProductos();
 
 	}
 
