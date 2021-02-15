@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 
 public class Almacen {
 
-	Producto productos[];
+	public Producto productos[];
 	String Localidad;
 	int codPostal;
 
