@@ -54,6 +54,7 @@ class AlmacenTest {
 	@DisplayName("Testeo de Generar Productos")
 	void testGenerarProductos() {
 
+		//Ejemplo de como abortar la prueba si el s.o. es linux
 		Assumptions.assumeFalse(System.getProperty("os.name").contains("Linux"));
 
 		//Ponemos 10 productos
