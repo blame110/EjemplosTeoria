@@ -37,8 +37,14 @@ public class AcessoSecuencial {
 			//Mientras la lectura del String del nombre no nos devuelva
 			//null, implica que todavia hay datos en el fichero
 
-			while ((nombre = fich.readUTF()) != null) {
+			//Otra forma de leer todos, mejor
+			//la funcion available() de DataInputStream nos devuelve los bytes 
+			//que quedan por leer del fichero, cuando son 0 acabamos el bucle
+			//Ya que implica que hemos leido todos los datos
+			while (fich.available() != 0) {
 
+				//Leemos los datos y los mostramos por pantalla
+				nombre = fich.readUTF();
 				System.out.println(nombre);
 				edad = fich.readInt();
 				System.out.println(edad);
