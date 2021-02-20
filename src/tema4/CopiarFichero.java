@@ -13,7 +13,7 @@ public class CopiarFichero {
 		// TODO Auto-generated method stub
 
 		try {
-			copiarFichero("C:\\pruebas\\sidnegro.jpg", "C:\\pruebas\\sidcopia.jpg");
+			copiarFichero("C:\\pruebas\\sidnegro.jpg", "C:\\pruebas\\sidcopia3.jpg");
 		}
 		//Controlamos el error de Entrada Salida
 		catch (IOException e) {
