@@ -5,7 +5,7 @@ public class EjemploArray1 {
 	/**
 	 * Esto es un buen javadoc
 	 */
-	public void main() {
+	public static void main(String[] args) {
 		//Un array se define como cualquier otra variable
 		//Pero al final lleva apertura y cierre de corchetes
 		int numeros[]; //Si añadimos esto =  {2,3,1,7,5}; automaticamente se asignan los valores
