@@ -19,7 +19,7 @@ public class EjemploArray1 {
 		numeros[0] = 2;
 		numeros[1] = 6;
 		numeros[2] = 8;
-		numeros[3] = 2;
+		numeros[3] = -40000;
 		numeros[4] = 22;
 
 		//Para acceder a un elemento del array ponemos dentro de los corchetes 
@@ -28,9 +28,10 @@ public class EjemploArray1 {
 
 		//Recorremos el array para calcular el maximo y la media
 		int max = Integer.MIN_VALUE;
+
 		int media = 0;
 		for (int i = 0; i < numeros.length; i++) {
-			//System.out.println(numeros[i]);
+			//System.out.println("Numero en posicion " + (i + 1) + " " + numeros[i]);
 
 			//Si el número es mayor que nuestro maximo
 			//Es el nuevo maximo
@@ -41,8 +42,14 @@ public class EjemploArray1 {
 
 		}
 
-		System.out.println("El máximo es " + max);
-		System.out.println("La media es " + media / numeros.length);
+		media = media / numeros.length;
+		//System.out.println("El máximo es " + max);
+		//System.out.println("La media es " + media);
+
+		//Prueba de minimo
+		OperacionesArray operaciones = new OperacionesArray();
+
+		System.out.println("El minimo es: " + operaciones.minimo(numeros));
 
 	}
 }
