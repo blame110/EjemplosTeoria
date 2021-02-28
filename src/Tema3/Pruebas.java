@@ -7,7 +7,7 @@ public class Pruebas {
 
 		// Definimos un objeto de la clase Triangulo, denominado miTri
 
-		Triangulo miTri;
+		/*Triangulo miTri;
 		System.out.println("Cantidad de Triangulos:" + Triangulo.cantidad);
 
 		// Para poder utilizar un objeto hay que llamar al Constructor con new
@@ -36,6 +36,20 @@ public class Pruebas {
 		System.out.println(miTri.toString());
 
 		System.out.println(tri1.toString());
+		*/
+		
+		Punto puntoa = new Punto (-6,2);
+		Punto puntob = new Punto (2,-2);
+		
+		Linea recta = new Linea(puntoa, puntob);
+		
+		System.out.println("La longitud de la recta es:" + recta.longitud());
+		
+		
+		
+		
+		
+		
 	}
 
 }
