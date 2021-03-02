@@ -1,4 +1,4 @@
-package tema4.examen;
+package examenes;
 
 import java.io.FileWriter;
 import java.io.IOException;

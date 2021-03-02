@@ -8,7 +8,7 @@ public class EjemploArray1 {
 	public static void main(String[] args) {
 		//Un array se define como cualquier otra variable
 		//Pero al final lleva apertura y cierre de corchetes
-		int numeros[]; //Si añadimos esto =  {2,3,1,7,5}; automaticamente se asignan los valores
+		int numeros[] //Si añadimos esto =  {2,3,1,7,5}; automaticamente se asignan los valores
 
 		//Los arrays deben de ser inicializados con el tamaño o longitud del array
 		//es necesario pasa hacer espacio en memoria para los valores

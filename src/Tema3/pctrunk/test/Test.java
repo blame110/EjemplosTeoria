@@ -9,6 +9,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.RepeatedTest;
 
 import Tema3.pctrunk.Almacen;
 import Tema3.pctrunk.Producto;
@@ -47,7 +48,7 @@ public class Test {
 	public void tearDown() throws Exception {
 	}
 
-	@org.junit.Test
+	@RepeatedTest(200)
 	public void test() {
 
 		Almacen almacen = new Almacen();

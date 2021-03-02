@@ -1,4 +1,4 @@
-package tema4.examen;
+package examenes;
 
 public class pruebaEscritura {
 
