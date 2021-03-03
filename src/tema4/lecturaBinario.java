@@ -16,16 +16,6 @@ public class lecturaBinario {
 			//de nuestro directorio
 			File fichero = new File("c:\\pruebas\\lectura.txt");
 
-			File ruta = new File("c:\\pruebas");
-
-			//Leo los directorios y ficheros de la ruta
-			String directorio[] = ruta.list();
-
-			//Muestro por pantalla los directorios
-			for (String linea : directorio) {
-				System.out.println(linea);
-			}
-
 			//Creamos un FileInputStream para poder leer del fichero
 			FileInputStream fLec = new FileInputStream(fichero);
 
