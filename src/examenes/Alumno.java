@@ -39,6 +39,15 @@ public class Alumno {
 	public int edad;
 	private boolean repetidor;
 
+	/*
+	 * Ejercicio practico:
+	 * 
+	 * Modificar el codigo de la clase alumno y llamarla AlumnoLista
+	 * de tal forma que ahora tendra 9 asignaturas y se guardaran 
+	 * en un ArrayList, hay que modificar todo el código que utilice las
+	 * asignaturas.
+	 */
+
 	Asignatura asignaturas[];
 
 	public String getNombre() {
