@@ -1,5 +1,8 @@
 package examenes;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /*
  * 
  * Clase Alumno
@@ -48,7 +51,7 @@ public class AlumnoListas {
 	 * asignaturas.
 	 */
 
-	Asignatura asignaturas[];
+	ArrayList<Asignatura> asignaturas;
 
 	public String getNombre() {
 		return nombre;
@@ -82,15 +85,8 @@ public class AlumnoListas {
 		this.repetidor = repetidor;
 	}
 
-	public Asignatura[] getAsignaturas() {
-		return asignaturas;
-	}
-
-	public void setAsignaturas(Asignatura[] asignaturas) {
-		this.asignaturas = asignaturas;
-	}
-
-	public Alumno(String nombre, String apellidos, int edad, boolean repetidor, Asignatura[] asignaturas) {
+	public AlumnoListas(String nombre, String apellidos, int edad, boolean repetidor,
+			ArrayList<Asignatura> asignaturas) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
@@ -99,48 +95,72 @@ public class AlumnoListas {
 		this.asignaturas = asignaturas;
 	}
 
-	public Alumno(String nombre, boolean repetidor) {
+	public ArrayList<Asignatura> getAsignaturas() {
+		return asignaturas;
+	}
+
+	public void setAsignaturas(ArrayList<Asignatura> asignaturas) {
+		this.asignaturas = asignaturas;
+	}
+
+	public AlumnoListas(String nombre, boolean repetidor) {
 		super();
 		this.nombre = nombre;
 		this.repetidor = repetidor;
 		this.apellidos = "";
 		this.edad = 0;
-		this.asignaturas = new Asignatura[6];
+		this.asignaturas = new ArrayList<Asignatura>();
 	}
 
 	/**
 	 * 
 	 * @return nota media
 	 */
+	//Recorremos el arrayList utilizando un for para cada elemento
 	float notaMedia() {
 		float notaMedia = 0;
 
 		//Acumulamos en notaMedia las notas de 
 		//todas las asignaturas del array
-		for (int i = 0; i < asignaturas.length; i++) {
-			notaMedia = notaMedia + asignaturas[i].nota;
-
+		for (Asignatura asi : asignaturas) {
+			notaMedia = notaMedia + asi.getNota();
 		}
 
 		//Devolvemos la nota media
-		return notaMedia / asignaturas.length;
+		return notaMedia / asignaturas.size();
 	}
 
+	//Recorremos el Arraylist utilizando Iterator
 	Asignatura notaMaxima() {
 		//Inicializamos el maximo al menor posible valor
 		float maximo = Float.MIN_VALUE;
-		int posicionMax = 0;
+		//En esta variable guardaremos la asignatura con 
+		//La nota maxima que devolveremos
+		Asignatura maximaNota = new Asignatura("Generica");
 
-		for (int i = 0; i < asignaturas.length; i++) {
-			if (asignaturas[i].nota > maximo) {
-				maximo = asignaturas[i].nota;
-				posicionMax = i;
+		//Recuperamos un Iterator para recorrer asignaturas
+		Iterator<Asignatura> iter = asignaturas.iterator();
+		int posMax = 0;
+
+		while (iter.hasNext()) {
+			//En asigTemp vamos leyedo todas las asignaturas 
+			//del arrayList utilizando next()
+			Asignatura asigTemp = iter.next();
+
+			if (asigTemp.nota > maximo) {
+				maximo = asigTemp.nota;
+				//maximaNota = asigTemp;
+				//Otra forma seria guardar la posicion de la asignatura
+				posMax = asignaturas.indexOf(asigTemp);
 			}
 
 		}
 
 		//Devolvemos la asignatura con mayor nota
-		return asignaturas[posicionMax];
+		//return maximaNota;
+
+		//De la otra forma devolveriamos la posicion de posMax
+		return asignaturas.get(posMax);
 
 	}
 
@@ -152,14 +172,14 @@ public class AlumnoListas {
 			int suspensos = 0;
 			//Recorremos el array para ver si se ha suspendido lengua
 			//y matematicas
-			for (int i = 0; i < asignaturas.length; i++) {
+			for (int i = 0; i < asignaturas.size(); i++) {
 
 				//Si es lengua y ha suspendido incrementamos los suspensos
-				if (asignaturas[i].getNombre().equalsIgnoreCase("lengua") && asignaturas[i].nota < 5.0f)
+				if (asignaturas.get(i).getNombre().equalsIgnoreCase("lengua") && asignaturas.get(i).nota < 5.0f)
 					suspensos++;
 
 				//Si es matematicas y ha suspendido incrementamos los suspensos
-				if (asignaturas[i].getNombre().equalsIgnoreCase("matematicas") && asignaturas[i].nota < 5.0f)
+				if (asignaturas.get(i).getNombre().equalsIgnoreCase("matematicas") && asignaturas.get(i).nota < 5.0f)
 					suspensos++;
 			}
 
