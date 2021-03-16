@@ -1,6 +1,7 @@
 package tema5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
@@ -12,6 +13,33 @@ public class EjemploArrayList2 {
 
 		//Creamos un objeto arraylist de Strings
 		ArrayList<String> list = new ArrayList<String>();//Creating arraylist  
+
+		/*
+		 * Conversion de Array normal a ArrayList
+		 * 
+		//Method 1
+		List<String> list = Arrays.asList(array);          
+		System.out.println(list);
+		
+		//Method 2
+		List<String> list1 = new ArrayList<String>();
+		Collections.addAll(list1, array);
+		System.out.println(list1);
+		 */
+
+		String nombres[] = new String[5];
+
+		nombres[0] = "Juan";
+		nombres[1] = "Jose";
+		nombres[2] = "Pedro";
+		nombres[3] = "Israel";
+		nombres[4] = "Samuel";
+
+		//Convertimos de array a arraylist
+		Collections.addAll(list, nombres);
+
+		//Ordenamos el vector
+		Collections.sort(list);
 
 		ArrayList<Integer> listaNumeros = new ArrayList<Integer>();
 
@@ -85,13 +113,21 @@ public class EjemploArrayList2 {
 		//Ejemplo de la Collecion Vector
 		Vector<String> v = new Vector<String>();
 
+		v.addAll(list);
+
 		v.add("Ayush");
-		v.add("Amit");
+		v.add(2, "perritosad");
+		v.add("Amits");
 		v.add("Ashish");
-		v.add("Garima");
+		v.add("Garimasds");
+
+		v.remove(4);
+		//v.remove("perrito");
 
 		//Podemos recorrer los ArrayList y los Vectores
 		//Con un for al igual que vimos con un array normal
+
+		System.out.println("Empieza Vector");
 		for (String nombre : v) {
 			System.out.println(nombre);
 		}

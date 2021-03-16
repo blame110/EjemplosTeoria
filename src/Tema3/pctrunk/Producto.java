@@ -33,7 +33,7 @@ public class Producto {
 	 * Generamos caracteres entre 65 y 90 que se corresponden
 	 * a las letras en el codigo ascii
 	 */
-	public String generarNombre() {
+	public static String generarNombre() {
 
 		String nombre = "";
 
