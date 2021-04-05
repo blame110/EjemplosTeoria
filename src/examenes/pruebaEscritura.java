@@ -7,6 +7,7 @@ public class pruebaEscritura {
 
 		//Creamos un array de String para introducir
 		//Los datos de las peliculas
+
 		String peliculas[] = new String[4];
 
 		peliculas[0] = "tiburon 1990 3,4 80 pepe S";

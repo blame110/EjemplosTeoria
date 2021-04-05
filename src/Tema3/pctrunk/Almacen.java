@@ -6,7 +6,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.StringTokenizer;
 
 public class Almacen {
@@ -74,6 +77,21 @@ public class Almacen {
 			return -1;
 		}
 
+	}
+
+	void estadisticas() {
+
+		ArrayList<Producto> prods = new ArrayList<Producto>();
+		Collections.addAll(prods, productos);
+
+		Iterator itr = prods.iterator();
+
+		Producto ejemplo = (Producto) itr.next();
+
+		int numAcesorios = 0;
+
+		if (ejemplo.getCategoria().getNombre().equalsIgnoreCase("Accesorios"))
+			numAcesorios++;
 	}
 
 	public int cargarProductos() {

@@ -27,6 +27,7 @@ public class EjemploArrayList2 {
 		System.out.println(list1);
 		 */
 
+		//Añadir un Array a un ArrayList
 		String nombres[] = new String[5];
 
 		nombres[0] = "Juan";
@@ -46,18 +47,18 @@ public class EjemploArrayList2 {
 		String fin = "S";
 		Scanner teclado = new Scanner(System.in);
 
-		while (fin.equalsIgnoreCase("S")) {
+		/*while (fin.equalsIgnoreCase("S")) {
 			System.out.println("Introduce un número:");
 			//Leemos el numero
 			int num = teclado.nextInt();
 			//Lo insertamos en el ArrayList
 			listaNumeros.add(num);
-
+		
 			System.out.println("¿Quieres Continuar (S/N):");
 			//Leemos el numero
 			fin = teclado.next();
 		}
-
+		*/
 		int max = Integer.MIN_VALUE;
 		int min = Integer.MAX_VALUE;
 		int media = 0;
@@ -116,12 +117,16 @@ public class EjemploArrayList2 {
 		v.addAll(list);
 
 		v.add("Ayush");
-		v.add(2, "perritosad");
+		v.add(2, "Perritosad");
 		v.add("Amits");
 		v.add("Ashish");
 		v.add("Garimasds");
 
-		v.remove(4);
+		v.remove(5);
+
+		//Ordenamos los String del vector
+		//Por orden alfabetico
+		Collections.sort(v);
 		//v.remove("perrito");
 
 		//Podemos recorrer los ArrayList y los Vectores

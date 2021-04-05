@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 public class EscrituraDatos {
 
 	public EscrituraDatos() {
@@ -86,6 +88,11 @@ public class EscrituraDatos {
 	}
 
 	public int guardarDatos(String fichero, String lineas[]) {
+
+		Logger log = Logger.getLogger(EscrituraDatos.class);
+		//BasicConfigurator.configure();
+
+		log.info("Empezamos a escribir en el fichero" + fichero);
 
 		Scanner teclado = new Scanner(System.in);
 		try {
