@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class EjemploNotaMayor {
 
@@ -21,8 +22,9 @@ public class EjemploNotaMayor {
 		float nota1, nota2, nota3;
 		float media;
 
-		BasicConfigurator.configure();
-
+		//BasicConfigurator.configure();
+		//PropertyConfigurator.configure("log4j.properties");
+		
 		log.debug("Hemos entrado");
 
 		// Leemos las notas por teclado

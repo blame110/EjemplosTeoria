@@ -19,5 +19,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="lib/org.apache.log4j.jar"/>
+	<classpathentry kind="lib" path="config"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
