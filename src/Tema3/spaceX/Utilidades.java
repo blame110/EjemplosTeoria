@@ -38,7 +38,7 @@ public class Utilidades {
 
 		String nombre = "";
 
-		if (tipo == this.TIPO_PERSONA) {
+		if (tipo == TIPO_PERSONA) {
 			//Generamos el nombre con 2 palabras
 		} else {
 			//Generamos el nombre con una palabra

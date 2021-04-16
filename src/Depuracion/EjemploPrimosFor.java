@@ -1,10 +1,18 @@
 package Depuracion;
 
 import java.util.Scanner;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 public class EjemploPrimosFor {
+	
+	//Creamos una variable miembro para los logs
+	static Logger log = Logger.getLogger(EjemploPrimosFor.class);
 
 	public static void main(String[] args) {
+		
+		//Configuracion basica del log
+		//BasicConfigurator.configure();
 
 		// bucle que recorre con for los 100 primeros números
 		/*
@@ -32,6 +40,8 @@ public class EjemploPrimosFor {
 			// y el num-1
 			// Un numero es divisible por otro si el resto
 			// de la division (%) es 0
+			
+			log.debug("Comprobando la divisibilidad de " + num + " entre " + i);
 			if (num % i == 0) {
 				esprimo = false;
 			}

@@ -4,3 +4,22 @@ Empezamos a escribir en el ficheroc:\pruebas\escritura2.txt
 0    [main] DEBUG Depuracion.EjemploNotaMayor  - Hemos entrado
 0    [main] DEBUG Depuracion.EjemploNotaMayor  - Hemos entrado
 0    [main] DEBUG Depuracion.EjemploNotaMayor  - Hemos entrado
+0    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre1
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre2
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre3
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre4
+8    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre5
+8    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 7entre6
+0    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 6 entre 1
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 6 entre 2
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 6 entre 3
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 6 entre 4
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 6 entre 5
+0    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 1
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 2
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 3
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 4
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 5
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 6
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 7
+2    [main] DEBUG Depuracion.EjemploPrimosFor  - Comprobando la divisibilidad de 9 entre 8

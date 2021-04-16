@@ -23,7 +23,7 @@ public class EjemploNotaMayor {
 		float media;
 
 		//BasicConfigurator.configure();
-		//PropertyConfigurator.configure("log4j.properties");
+		//PropertyConfigurator.configure("config/logProductos.properties");
 		
 		log.debug("Hemos entrado");
 
