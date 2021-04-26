@@ -6,7 +6,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		Arma laserx = new Arma();
-		Arma lasery = new Arma("Super Laser");
+		Arma lasery = new Arma();
 
 		System.out.println(laserx.toString());
 		System.out.println(lasery.toString());
