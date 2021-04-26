@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.RepeatedTest;
 
-import Tema3.pctrunk.Almacen;
+import Tema3.pctrunk.Almacenes;
 import Tema3.pctrunk.Producto;
 
 /**
@@ -51,7 +51,7 @@ public class Test {
 	@RepeatedTest(200)
 	public void test() {
 
-		Almacen almacen = new Almacen();
+		Almacenes almacen = new Almacenes();
 		Producto tecladoMars = new Producto();
 		Producto ratonMars = new Producto();
 		Producto alfombrillaMars = new Producto();

@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import Tema3.pctrunk.Almacen;
+import Tema3.pctrunk.Almacenes;
 import Tema3.pctrunk.Producto;
 
 /**
@@ -21,7 +21,7 @@ import Tema3.pctrunk.Producto;
  */
 class AlmacenTest {
 
-	public static Almacen madrid;
+	public static Almacenes madrid;
 
 	/**
 	 * @throws java.lang.Exception
@@ -29,7 +29,7 @@ class AlmacenTest {
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 
-		madrid = new Almacen();
+		madrid = new Almacenes();
 	}
 
 	/**
@@ -40,7 +40,7 @@ class AlmacenTest {
 	}
 
 	/**
-	 * Test method for {@link Tema3.pctrunk.Almacen#cargarProductos()}.
+	 * Test method for {@link Tema3.pctrunk.Almacenes#cargarProductos()}.
 	 */
 	@Test
 	void testCargarProductos() {
@@ -48,7 +48,7 @@ class AlmacenTest {
 	}
 
 	/**
-	 * Test method for {@link Tema3.pctrunk.Almacen#generarProductos(int)}.
+	 * Test method for {@link Tema3.pctrunk.Almacenes#generarProductos(int)}.
 	 */
 	@Test
 	@DisplayName("Testeo de Generar Productos")
@@ -72,7 +72,7 @@ class AlmacenTest {
 	}
 
 	/**
-	 * Test method for {@link Tema3.pctrunk.Almacen#calcularPrecios(Tema3.pctrunk.Producto[])}.
+	 * Test method for {@link Tema3.pctrunk.Almacenes#calcularPrecios(Tema3.pctrunk.Producto[])}.
 	 */
 	@Test
 	void testCalcularPrecios() {

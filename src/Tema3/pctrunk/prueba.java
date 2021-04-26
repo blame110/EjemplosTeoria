@@ -8,7 +8,7 @@ public class prueba {
 		Producto tecladoMars = new Producto();
 		Categoria hardware = new Categoria();
 		Categoria software = new Categoria(3, "Software", "Todo tipo de programas oficales");
-		Almacen sevilla = new Almacen();
+		Almacenes sevilla = new Almacenes();
 
 		System.out.println(sevilla);
 

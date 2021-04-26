@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 
-public class Almacen {
+public class Almacenes {
 
 	public Producto productos[];
 	String Localidad;
@@ -21,13 +21,13 @@ public class Almacen {
 	public static int NUM_PRODUCTOS = 10;
 	public final String RUTA_FICHERO = "c:\\pruebas\\productos.txt";
 
-	public Almacen() {
+	public Almacenes() {
 		this.Localidad = "Generica";
 		this.codPostal = 00000;
 		this.productos = this.generarProductos(this.NUM_PRODUCTOS);
 	}
 
-	public Almacen(Producto[] productos, String localidad, int codPostal) {
+	public Almacenes(Producto[] productos, String localidad, int codPostal) {
 		super();
 		this.productos = productos;
 		Localidad = localidad;

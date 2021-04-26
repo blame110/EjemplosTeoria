@@ -22,12 +22,17 @@ public class CalculoPerimetroCirculo {
 		Scanner teclado = new Scanner(System.in);
 		radio = teclado.nextDouble();
 
-		perimetro = 2 * pi * radio;
-
-		System.out.print("El perimetro es :" + perimetro + " \nQue pase un buen dia");
+		calcularadio(radio, pi);
 
 		teclado.close();
 
+	}
+
+	private static void calcularadio(double radio, double pi) {
+		double perimetro;
+		perimetro = 2 * pi * radio;
+
+		System.out.print("El perimetro es :" + perimetro + " \nQue pase un buen dia");
 	}
 
 }
