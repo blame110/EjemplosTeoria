@@ -11,28 +11,7 @@ public class EjemploOperadores {
 		int numero2 = 4;
 		Scanner teclado = new Scanner(System.in);
 
-		// numero = numero + 2;
-		numero += 2;
-
-		// numero = numero * 5;
-		numero *= 5;
-
-		// numero = numero + 1
-		numero++;
-
-		// En este caso numero vale 4 porque primero
-		// se hace la asignacion antes de incrementar
-		// numero2
-		numero = numero2++;
-
-		System.out.println("Numero es " + numero);
-
-		// En este caso primero se le suma 1 a numero2
-		// Y despues se asigna a numero el resultado
-		numero = ++numero2;
-
-		System.out.println("Numero es " + numero);
-		System.out.println("Numero2 es " + numero2);
+		incremento(numero, numero2);
 
 		System.out.print("Introduce un número: ");
 		numero = teclado.nextInt();
@@ -62,6 +41,31 @@ public class EjemploOperadores {
 			System.out.println("No es múltiplo de 5");
 		}
 
+	}
+
+	private static void incremento(int numero, int numero2) {
+		// numero = numero + 2;
+		numero += 2;
+
+		// numero = numero * 5;
+		numero *= 5;
+
+		// numero = numero + 1
+		numero++;
+
+		// En este caso numero vale 4 porque primero
+		// se hace la asignacion antes de incrementar
+		// numero2
+		numero = numero2++;
+
+		System.out.println("Numero es " + numero);
+
+		// En este caso primero se le suma 1 a numero2
+		// Y despues se asigna a numero el resultado
+		numero = ++numero2;
+
+		System.out.println("Numero es " + numero);
+		System.out.println("Numero2 es " + numero2);
 	}
 
 }

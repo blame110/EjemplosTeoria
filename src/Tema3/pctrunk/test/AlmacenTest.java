@@ -40,7 +40,7 @@ class AlmacenTest {
 	}
 
 	/**
-	 * Test method for {@link Tema3.pctrunk.Almacenes#cargarProductos()}.
+	 * Test method for {@link Tema3.pctrunk.Almacenes#loadProducts()}.
 	 */
 	@Test
 	void testCargarProductos() {

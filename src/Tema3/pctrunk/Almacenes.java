@@ -94,7 +94,7 @@ public class Almacenes {
 			numAcesorios++;
 	}
 
-	public int cargarProductos() {
+	public int loadProducts() {
 
 		try {
 
@@ -103,12 +103,32 @@ public class Almacenes {
 			//Utilizamos FileReader y BufferedReader para poder leer linea a linea en modo texto
 			FileReader fr = new FileReader(arch);
 			BufferedReader br = new BufferedReader(fr);
-
-			for (int i = 0; i < this.NUM_PRODUCTOS; i++) {
-
+			
+			//leemos la primera linea fuera del bucle
+			String linea = br.readLine();
+			int numLineas=0;
+			
+			while (linea!=null) {
+				numLineas++;
 				//leemos una linea del fichero
-				String linea = br.readLine();
-
+				linea = br.readLine();
+				
+			}
+			
+			//Inicializamos el array de productos al tamaño de
+			//las lineas del fichero
+			productos = new Producto[numLineas];
+			
+			//Cerramos y abrimos el fichero para que vuelva al principio
+			br.close();
+			fr = new FileReader(arch);
+			br = new BufferedReader(fr);
+			
+			for (int i=0;i<numLineas;i++) {
+				
+				//Pasamos a la siguiente posicion del array y leemos la siguiente linea
+				linea = br.readLine();
+				
 				//Para cada linea tenemos que extraer todos los campos del producto
 				//Utilizamos un StringTokenizer para separarlos
 				StringTokenizer tokens = new StringTokenizer(linea);
@@ -135,7 +155,9 @@ public class Almacenes {
 
 				//Guardamos el producto en el array de productos del almacen
 				this.productos[i] = prod;
-
+				
+				
+				
 			}
 
 			//for (int i = 0; i < 10; i++)
