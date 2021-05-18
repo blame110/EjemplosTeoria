@@ -6,6 +6,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -94,6 +99,48 @@ public class Almacenes {
 			numAcesorios++;
 	}
 
+	public int cargarProductosDB()
+	{
+		Statement stmt;
+        ResultSet res;
+        Connection con;
+        
+        String url = "jdbc:mysql://localhost:3306/almacenes?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false";  
+        String name = "com.mysql.cj.jdbc.Driver";  
+        String user = "root";  
+        String password = "toor";
+        
+        
+         try {// Cargue la clase de controlador de base de datos
+                	 Class.forName(name);
+      		         System.out.println ("El controlador de la base de datos se cargó correctamente");
+      	  }catch(ClassNotFoundException e){
+      		  e.printStackTrace();
+      	  }
+      	  try {
+      		           con = DriverManager.getConnection (url, user, password); // Obtenga el objeto de conexión de la base de datos accediendo a la URL de la base de datos
+      		           System.out.println ("Conexión de base de datos exitosa");
+      		           
+      		       stmt = con.createStatement();
+      		       res = stmt.executeQuery("SELECT * FROM productos");
+      		       
+      		       while (res.next()) {
+      		    	  String nombre = res.getString("nombre");
+      		    	  System.out.println(nombre);
+      		    	}
+      		       
+      		       
+      		       
+      		           
+      	  }catch(SQLException e) {
+      		  e.printStackTrace();
+      	  }
+      	            // Devuelve un objeto Connection como lo requiere el método
+        
+	
+	return 0;
+	}
+	
 	public int loadProducts() {
 
 		try {

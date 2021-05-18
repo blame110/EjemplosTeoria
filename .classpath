@@ -20,5 +20,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="lib" path="lib/org.apache.log4j.jar"/>
 	<classpathentry kind="lib" path="config"/>
+	<classpathentry kind="lib" path="C:/Users/pablo/Downloads/mysql-connector-java-8.0.19.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

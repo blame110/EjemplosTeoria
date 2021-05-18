@@ -9,8 +9,10 @@ public class prueba {
 		Categoria hardware = new Categoria();
 		Categoria software = new Categoria(3, "Software", "Todo tipo de programas oficales");
 		Almacenes sevilla = new Almacenes();
+		
+		sevilla.cargarProductosDB();
 
-		System.out.println(sevilla);
+		System.out.println(sevilla.productos);
 
 	}
 
